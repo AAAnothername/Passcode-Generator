@@ -6,10 +6,20 @@ public class Program
 {
     public static void Main()
     {
-        int[] numbers = { }; //an array detecting existing codes
-        Console.WriteLine("Press Any Key to generate your code...");
+        int[] numbers = { };
+        Console.WriteLine("Press Enter to generate your code...");
     _Generate:
-        Console.ReadKey(); // detects input
+        ConsoleKeyInfo result = Console.ReadKey();
+        if ((result.KeyChar == 13) || (result.KeyChar == 13))
+        {
+
+        }
+        else
+        {
+            Console.WriteLine();
+            Console.WriteLine("Invalid Input.");
+            goto _Generate;
+        }
         Console.WriteLine();
         Console.WriteLine();
 
